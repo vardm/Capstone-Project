@@ -1,0 +1,2500 @@
+operator new(unsigned long, void*):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-16]
+        pop     rbp
+        ret
+std::char_traits<char>::compare(char const*, char const*, unsigned long):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        cmp     QWORD PTR [rbp-24], 0
+        jne     .L4
+        mov     eax, 0
+        jmp     .L5
+.L4:
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rcx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    memcmp
+        nop
+.L5:
+        leave
+        ret
+homeworkAssignment::homeworkAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 40
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     DWORD PTR [rbp-36], edx
+        mov     DWORD PTR [rbp-40], ecx
+        mov     DWORD PTR [rbp-44], r8d
+        mov     eax, r9d
+        mov     BYTE PTR [rbp-48], al
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string() [complete object constructor]
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdx, QWORD PTR [rbp-32]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::operator=(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        mov     rax, QWORD PTR [rbp-24]
+        mov     edx, DWORD PTR [rbp-36]
+        mov     DWORD PTR [rax+32], edx
+        mov     rax, QWORD PTR [rbp-24]
+        mov     edx, DWORD PTR [rbp-40]
+        mov     DWORD PTR [rax+36], edx
+        mov     rax, QWORD PTR [rbp-24]
+        mov     edx, DWORD PTR [rbp-44]
+        mov     DWORD PTR [rax+40], edx
+        mov     rax, QWORD PTR [rbp-24]
+        movzx   edx, BYTE PTR [rbp-48]
+        mov     BYTE PTR [rax+44], dl
+        mov     rax, QWORD PTR [rbp-24]
+        mov     BYTE PTR [rax+45], 0
+        jmp     .L9
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+.L9:
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+homeworkAssignment::getDueDate():
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     eax, DWORD PTR [rax+32]
+        pop     rbp
+        ret
+homeworkAssignment::getCourse[abi:cxx11]():
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        mov     rax, QWORD PTR [rbp-8]
+        leave
+        ret
+homeworkAssignment::getHomeworkNumber():
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     eax, DWORD PTR [rax+40]
+        pop     rbp
+        ret
+homeworkAssignment::getprogress():
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        movzx   eax, BYTE PTR [rax+44]
+        pop     rbp
+        ret
+homeworkAssignment::~homeworkAssignment() [base object destructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        nop
+        leave
+        ret
+homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool):
+        push    rbp
+        mov     rbp, rsp
+        push    r12
+        push    rbx
+        sub     rsp, 112
+        mov     QWORD PTR [rbp-104], rdi
+        mov     QWORD PTR [rbp-112], rsi
+        mov     DWORD PTR [rbp-116], edx
+        mov     DWORD PTR [rbp-120], ecx
+        mov     DWORD PTR [rbp-124], r8d
+        mov     eax, r9d
+        mov     BYTE PTR [rbp-128], al
+        mov     rbx, QWORD PTR [rbp-104]
+        movzx   r12d, BYTE PTR [rbp-128]
+        mov     rdx, QWORD PTR [rbp-112]
+        lea     rax, [rbp-48]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        mov     edi, DWORD PTR [rbp-124]
+        mov     ecx, DWORD PTR [rbp-120]
+        mov     edx, DWORD PTR [rbp-116]
+        lea     rsi, [rbp-48]
+        lea     rax, [rbp-96]
+        mov     r9d, r12d
+        mov     r8d, edi
+        mov     rdi, rax
+        call    homeworkAssignment::homeworkAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-96]
+        mov     rsi, rax
+        mov     rdi, rbx
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::push_back(homeworkAssignment&&)
+        lea     rax, [rbp-96]
+        mov     rdi, rax
+        call    homeworkAssignment::~homeworkAssignment() [complete object destructor]
+        lea     rax, [rbp-48]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L24
+        mov     rbx, rax
+        lea     rax, [rbp-96]
+        mov     rdi, rax
+        call    homeworkAssignment::~homeworkAssignment() [complete object destructor]
+        jmp     .L21
+        mov     rbx, rax
+.L21:
+        lea     rax, [rbp-48]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+.L24:
+        add     rsp, 112
+        pop     rbx
+        pop     r12
+        pop     rbp
+        ret
+.LC0:
+        .string "Assignments due in "
+.LC1:
+        .string " days:\n"
+.LC2:
+        .string "Course: "
+.LC3:
+        .string " Homework Number: "
+homeworkManagementSystem::searchDueDate(int):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 72
+        mov     QWORD PTR [rbp-72], rdi
+        mov     DWORD PTR [rbp-76], esi
+        mov     esi, OFFSET FLAT:.LC0
+        mov     edi, OFFSET FLAT:_ZSt4cout
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rdx, rax
+        mov     eax, DWORD PTR [rbp-76]
+        mov     esi, eax
+        mov     rdi, rdx
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(int)
+        mov     esi, OFFSET FLAT:.LC1
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     DWORD PTR [rbp-20], 0
+.L28:
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rbx, eax
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const
+        cmp     rbx, rax
+        setb    al
+        test    al, al
+        je      .L31
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdi, rax
+        call    homeworkAssignment::getDueDate()
+        cmp     DWORD PTR [rbp-76], eax
+        sete    al
+        test    al, al
+        je      .L27
+        mov     esi, OFFSET FLAT:.LC2
+        mov     edi, OFFSET FLAT:_ZSt4cout
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rbx, rax
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdx, rax
+        lea     rax, [rbp-64]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    homeworkAssignment::getCourse[abi:cxx11]()
+        lea     rax, [rbp-64]
+        mov     rsi, rax
+        mov     rdi, rbx
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        mov     esi, OFFSET FLAT:.LC3
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rbx, rax
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdi, rax
+        call    homeworkAssignment::getHomeworkNumber()
+        mov     esi, eax
+        mov     rdi, rbx
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(int)
+        mov     esi, OFFSET FLAT:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))
+        lea     rax, [rbp-64]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+.L27:
+        add     DWORD PTR [rbp-20], 1
+        jmp     .L28
+        mov     rbx, rax
+        lea     rax, [rbp-64]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+.L31:
+        nop
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+.LC4:
+        .string "Course found: "
+.LC5:
+        .string "Course homework number : "
+.LC6:
+        .string "Course due date: "
+.LC7:
+        .string "Course not found!"
+homeworkManagementSystem::searchByCourse(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >):
+        push    rbp
+        mov     rbp, rsp
+        push    r12
+        push    rbx
+        add     rsp, -128
+        mov     QWORD PTR [rbp-136], rdi
+        mov     QWORD PTR [rbp-144], rsi
+        mov     DWORD PTR [rbp-20], 0
+.L39:
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rbx, eax
+        mov     rax, QWORD PTR [rbp-136]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const
+        cmp     rbx, rax
+        setb    al
+        test    al, al
+        je      .L45
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-136]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdx, rax
+        lea     rax, [rbp-128]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    homeworkAssignment::getCourse[abi:cxx11]()
+        mov     rdx, QWORD PTR [rbp-144]
+        lea     rax, [rbp-128]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        mov     ebx, eax
+        lea     rax, [rbp-128]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        test    bl, bl
+        je      .L34
+        mov     esi, OFFSET FLAT:.LC4
+        mov     edi, OFFSET FLAT:_ZSt4cout
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rbx, rax
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-136]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdx, rax
+        lea     rax, [rbp-96]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    homeworkAssignment::getCourse[abi:cxx11]()
+        lea     rax, [rbp-96]
+        mov     rsi, rax
+        mov     rdi, rbx
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        mov     esi, OFFSET FLAT:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))
+        lea     rax, [rbp-96]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        mov     esi, OFFSET FLAT:.LC5
+        mov     edi, OFFSET FLAT:_ZSt4cout
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rbx, rax
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-136]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdi, rax
+        call    homeworkAssignment::getHomeworkNumber()
+        mov     esi, eax
+        mov     rdi, rbx
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(int)
+        mov     esi, OFFSET FLAT:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))
+        mov     esi, OFFSET FLAT:.LC6
+        mov     edi, OFFSET FLAT:_ZSt4cout
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rbx, rax
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-136]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdi, rax
+        call    homeworkAssignment::getDueDate()
+        mov     esi, eax
+        mov     rdi, rbx
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(int)
+        mov     esi, OFFSET FLAT:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))
+        jmp     .L35
+.L34:
+        mov     ebx, 0
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   r12, eax
+        mov     rax, QWORD PTR [rbp-136]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const
+        cmp     r12, rax
+        jne     .L36
+        mov     eax, DWORD PTR [rbp-20]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-136]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdx, rax
+        lea     rax, [rbp-64]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    homeworkAssignment::getCourse[abi:cxx11]()
+        mov     ebx, 1
+        mov     rdx, QWORD PTR [rbp-144]
+        lea     rax, [rbp-64]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    bool std::operator!=<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        test    al, al
+        je      .L36
+        mov     r12d, 1
+        jmp     .L37
+.L36:
+        mov     r12d, 0
+.L37:
+        test    bl, bl
+        je      .L38
+        lea     rax, [rbp-64]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+.L38:
+        test    r12b, r12b
+        je      .L35
+        mov     esi, OFFSET FLAT:.LC7
+        mov     edi, OFFSET FLAT:_ZSt4cout
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     esi, OFFSET FLAT:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))
+.L35:
+        add     DWORD PTR [rbp-20], 1
+        jmp     .L39
+        mov     rbx, rax
+        lea     rax, [rbp-96]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     r12, rax
+        test    bl, bl
+        je      .L42
+        lea     rax, [rbp-64]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+.L42:
+        mov     rax, r12
+        mov     rdi, rax
+        call    _Unwind_Resume
+.L45:
+        nop
+        sub     rsp, -128
+        pop     rbx
+        pop     r12
+        pop     rbp
+        ret
+.LC8:
+        .string " Days due: "
+homeworkManagementSystem::displayprogress(int):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 72
+        mov     QWORD PTR [rbp-72], rdi
+        mov     DWORD PTR [rbp-76], esi
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const
+        mov     DWORD PTR [rbp-20], eax
+        mov     eax, DWORD PTR [rbp-76]
+        cmp     eax, DWORD PTR [rbp-20]
+        je      .L52
+        mov     eax, DWORD PTR [rbp-76]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdi, rax
+        call    homeworkAssignment::getprogress()
+        movzx   eax, al
+        cmp     eax, 1
+        sete    al
+        test    al, al
+        je      .L49
+        mov     esi, OFFSET FLAT:.LC2
+        mov     edi, OFFSET FLAT:_ZSt4cout
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rbx, rax
+        mov     eax, DWORD PTR [rbp-76]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdx, rax
+        lea     rax, [rbp-64]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    homeworkAssignment::getCourse[abi:cxx11]()
+        lea     rax, [rbp-64]
+        mov     rsi, rax
+        mov     rdi, rbx
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <char, std::char_traits<char>, std::allocator<char> >(std::basic_ostream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        mov     esi, OFFSET FLAT:.LC3
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rbx, rax
+        mov     eax, DWORD PTR [rbp-76]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdi, rax
+        call    homeworkAssignment::getHomeworkNumber()
+        mov     esi, eax
+        mov     rdi, rbx
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(int)
+        mov     esi, OFFSET FLAT:.LC8
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >& std::operator<< <std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*)
+        mov     rbx, rax
+        mov     eax, DWORD PTR [rbp-76]
+        movsx   rdx, eax
+        mov     rax, QWORD PTR [rbp-72]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long)
+        mov     rdi, rax
+        call    homeworkAssignment::getDueDate()
+        mov     esi, eax
+        mov     rdi, rbx
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(int)
+        mov     esi, OFFSET FLAT:_ZSt4endlIcSt11char_traitsIcEERSt13basic_ostreamIT_T0_ES6_
+        mov     rdi, rax
+        call    std::basic_ostream<char, std::char_traits<char> >::operator<<(std::basic_ostream<char, std::char_traits<char> >& (*)(std::basic_ostream<char, std::char_traits<char> >&))
+        lea     rax, [rbp-64]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+.L49:
+        mov     eax, DWORD PTR [rbp-76]
+        lea     edx, [rax+1]
+        mov     rax, QWORD PTR [rbp-72]
+        mov     esi, edx
+        mov     rdi, rax
+        call    homeworkManagementSystem::displayprogress(int)
+        jmp     .L46
+        mov     rbx, rax
+        lea     rax, [rbp-64]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+.L52:
+        nop
+.L46:
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_Vector_impl::~_Vector_impl() [base object destructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::allocator<homeworkAssignment>::~allocator() [base object destructor]
+        nop
+        leave
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_Vector_base() [base object constructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_Vector_impl::_Vector_impl() [complete object constructor]
+        nop
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::vector() [base object constructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_Vector_base() [base object constructor]
+        nop
+        leave
+        ret
+homeworkManagementSystem::homeworkManagementSystem() [base object constructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::vector() [complete object constructor]
+        nop
+        leave
+        ret
+hwmanage:
+        .zero   24
+.LC9:
+        .string "math"
+.LC10:
+        .string "Computers"
+.LC11:
+        .string "German"
+.LC12:
+        .string "Art"
+.LC13:
+        .string "art"
+main:
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 584
+        lea     rax, [rbp-545]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-545]
+        lea     rax, [rbp-592]
+        mov     esi, OFFSET FLAT:.LC9
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-592]
+        mov     r9d, 0
+        mov     r8d, 1
+        mov     ecx, 2
+        mov     edx, 5
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-592]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-545]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-497]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-497]
+        lea     rax, [rbp-544]
+        mov     esi, OFFSET FLAT:.LC9
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-544]
+        mov     r9d, 1
+        mov     r8d, 2
+        mov     ecx, 2
+        mov     edx, 4
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-544]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-497]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-449]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-449]
+        lea     rax, [rbp-496]
+        mov     esi, OFFSET FLAT:.LC9
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-496]
+        mov     r9d, 1
+        mov     r8d, 3
+        mov     ecx, 4
+        mov     edx, 2
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-496]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-449]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-401]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-401]
+        lea     rax, [rbp-448]
+        mov     esi, OFFSET FLAT:.LC10
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-448]
+        mov     r9d, 1
+        mov     r8d, 4
+        mov     ecx, 5
+        mov     edx, 2
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-448]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-401]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-353]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-353]
+        lea     rax, [rbp-400]
+        mov     esi, OFFSET FLAT:.LC10
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-400]
+        mov     r9d, 1
+        mov     r8d, 5
+        mov     ecx, 2
+        mov     edx, 5
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-400]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-353]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-305]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-305]
+        lea     rax, [rbp-352]
+        mov     esi, OFFSET FLAT:.LC10
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-352]
+        mov     r9d, 0
+        mov     r8d, 6
+        mov     ecx, 7
+        mov     edx, 6
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-352]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-305]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-257]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-257]
+        lea     rax, [rbp-304]
+        mov     esi, OFFSET FLAT:.LC11
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-304]
+        mov     r9d, 0
+        mov     r8d, 7
+        mov     ecx, 2
+        mov     edx, 1
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-304]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-257]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-209]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-209]
+        lea     rax, [rbp-256]
+        mov     esi, OFFSET FLAT:.LC12
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-256]
+        mov     r9d, 1
+        mov     r8d, 8
+        mov     ecx, 2
+        mov     edx, 2
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-256]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-209]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-161]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-161]
+        lea     rax, [rbp-208]
+        mov     esi, OFFSET FLAT:.LC12
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-208]
+        mov     r9d, 1
+        mov     r8d, 9
+        mov     ecx, 2
+        mov     edx, 2
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-208]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-161]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-113]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-113]
+        lea     rax, [rbp-160]
+        mov     esi, OFFSET FLAT:.LC12
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-160]
+        mov     r9d, 0
+        mov     r8d, 10
+        mov     ecx, 2
+        mov     edx, 2
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::ADDAssignment(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, int, int, int, bool)
+        lea     rax, [rbp-160]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-113]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     esi, 0
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::displayprogress(int)
+        mov     esi, 2
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::searchDueDate(int)
+        lea     rax, [rbp-65]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-65]
+        lea     rax, [rbp-112]
+        mov     esi, OFFSET FLAT:.LC9
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-112]
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::searchByCourse(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+        lea     rax, [rbp-112]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-65]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        lea     rax, [rbp-17]
+        mov     rdi, rax
+        call    std::allocator<char>::allocator() [complete object constructor]
+        lea     rdx, [rbp-17]
+        lea     rax, [rbp-64]
+        mov     esi, OFFSET FLAT:.LC13
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(char const*, std::allocator<char> const&)
+        lea     rax, [rbp-64]
+        mov     rsi, rax
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::searchByCourse(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >)
+        lea     rax, [rbp-64]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        lea     rax, [rbp-17]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     eax, 0
+        jmp     .L107
+        mov     rbx, rax
+        lea     rax, [rbp-592]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L60
+        mov     rbx, rax
+.L60:
+        lea     rax, [rbp-545]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-544]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L62
+        mov     rbx, rax
+.L62:
+        lea     rax, [rbp-497]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-496]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L64
+        mov     rbx, rax
+.L64:
+        lea     rax, [rbp-449]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-448]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L66
+        mov     rbx, rax
+.L66:
+        lea     rax, [rbp-401]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-400]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L68
+        mov     rbx, rax
+.L68:
+        lea     rax, [rbp-353]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-352]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L70
+        mov     rbx, rax
+.L70:
+        lea     rax, [rbp-305]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-304]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L72
+        mov     rbx, rax
+.L72:
+        lea     rax, [rbp-257]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-256]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L74
+        mov     rbx, rax
+.L74:
+        lea     rax, [rbp-209]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-208]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L76
+        mov     rbx, rax
+.L76:
+        lea     rax, [rbp-161]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-160]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L78
+        mov     rbx, rax
+.L78:
+        lea     rax, [rbp-113]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-112]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L80
+        mov     rbx, rax
+.L80:
+        lea     rax, [rbp-65]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+        mov     rbx, rax
+        lea     rax, [rbp-64]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string() [complete object destructor]
+        jmp     .L82
+        mov     rbx, rax
+.L82:
+        lea     rax, [rbp-17]
+        mov     rdi, rax
+        call    std::allocator<char>::~allocator() [complete object destructor]
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+.L107:
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::push_back(homeworkAssignment&&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-16]
+        mov     rdi, rax
+        call    std::remove_reference<homeworkAssignment&>::type&& std::move<homeworkAssignment&>(homeworkAssignment&)
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    void std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::emplace_back<homeworkAssignment>(homeworkAssignment&&)
+        nop
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdx, QWORD PTR [rax+8]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rcx, QWORD PTR [rax]
+        mov     rax, rdx
+        sub     rax, rcx
+        sar     rax, 4
+        mov     rdx, rax
+        movabs  rax, -6148914691236517205
+        imul    rax, rdx
+        pop     rbp
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::operator[](unsigned long):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rcx, QWORD PTR [rax]
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rax, rdx
+        add     rax, rax
+        add     rax, rdx
+        sal     rax, 4
+        add     rax, rcx
+        pop     rbp
+        ret
+__gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&):
+        push    rbp
+        mov     rbp, rsp
+        push    r12
+        push    rbx
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const
+        cmp     rbx, rax
+        jne     .L114
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::size() const
+        mov     r12, rax
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::data() const
+        mov     rdx, r12
+        mov     rsi, rbx
+        mov     rdi, rax
+        call    std::char_traits<char>::compare(char const*, char const*, unsigned long)
+        test    eax, eax
+        jne     .L114
+        mov     eax, 1
+        jmp     .L115
+.L114:
+        mov     eax, 0
+.L115:
+        add     rsp, 16
+        pop     rbx
+        pop     r12
+        pop     rbp
+        ret
+bool std::operator!=<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    __gnu_cxx::__enable_if<std::__is_char<char>::__value, bool>::__type std::operator==<char>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+        xor     eax, 1
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::begin():
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-24], rdi
+        mov     rdx, QWORD PTR [rbp-24]
+        lea     rax, [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::__normal_iterator(homeworkAssignment* const&)
+        mov     rax, QWORD PTR [rbp-8]
+        leave
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_Vector_impl::_Vector_impl() [base object constructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::allocator<homeworkAssignment>::allocator() [base object constructor]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_Vector_impl_data::_Vector_impl_data() [base object constructor]
+        nop
+        leave
+        ret
+std::allocator<homeworkAssignment>::~allocator() [base object destructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    __gnu_cxx::new_allocator<homeworkAssignment>::~new_allocator() [base object destructor]
+        nop
+        leave
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::~_Vector_base() [base object destructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdx, QWORD PTR [rax+16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rcx, QWORD PTR [rax]
+        mov     rax, rdx
+        sub     rax, rcx
+        sar     rax, 4
+        mov     rdx, rax
+        movabs  rax, -6148914691236517205
+        imul    rax, rdx
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rcx, QWORD PTR [rax]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_deallocate(homeworkAssignment*, unsigned long)
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_Vector_impl::~_Vector_impl() [complete object destructor]
+        nop
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::~vector() [base object destructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator()
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rcx, QWORD PTR [rax+8]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rax, QWORD PTR [rax]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    void std::_Destroy<homeworkAssignment*, homeworkAssignment>(homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::~_Vector_base() [base object destructor]
+        nop
+        leave
+        ret
+std::remove_reference<homeworkAssignment&>::type&& std::move<homeworkAssignment&>(homeworkAssignment&):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+void std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::emplace_back<homeworkAssignment>(homeworkAssignment&&):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 24
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdx, QWORD PTR [rax+8]
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rax, QWORD PTR [rax+16]
+        cmp     rdx, rax
+        je      .L128
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    homeworkAssignment&& std::forward<homeworkAssignment>(std::remove_reference<homeworkAssignment>::type&)
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rcx, QWORD PTR [rax+8]
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    void std::allocator_traits<std::allocator<homeworkAssignment> >::construct<homeworkAssignment, homeworkAssignment>(std::allocator<homeworkAssignment>&, homeworkAssignment*, homeworkAssignment&&)
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rax, QWORD PTR [rax+8]
+        lea     rdx, [rax+48]
+        mov     rax, QWORD PTR [rbp-24]
+        mov     QWORD PTR [rax+8], rdx
+        jmp     .L130
+.L128:
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    homeworkAssignment&& std::forward<homeworkAssignment>(std::remove_reference<homeworkAssignment>::type&)
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::end()
+        mov     rcx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdx, rbx
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    void std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_realloc_insert<homeworkAssignment>(__gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >, homeworkAssignment&&)
+.L130:
+        nop
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+__gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::__normal_iterator(homeworkAssignment* const&):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-16]
+        mov     rdx, QWORD PTR [rax]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     QWORD PTR [rax], rdx
+        nop
+        pop     rbp
+        ret
+__gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::base() const:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+std::allocator<homeworkAssignment>::allocator() [base object constructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    __gnu_cxx::new_allocator<homeworkAssignment>::new_allocator() [base object constructor]
+        nop
+        leave
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_Vector_impl_data::_Vector_impl_data() [base object constructor]:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     QWORD PTR [rax], 0
+        mov     rax, QWORD PTR [rbp-8]
+        mov     QWORD PTR [rax+8], 0
+        mov     rax, QWORD PTR [rbp-8]
+        mov     QWORD PTR [rax+16], 0
+        nop
+        pop     rbp
+        ret
+__gnu_cxx::new_allocator<homeworkAssignment>::~new_allocator() [base object destructor]:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        nop
+        pop     rbp
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_deallocate(homeworkAssignment*, unsigned long):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        cmp     QWORD PTR [rbp-16], 0
+        je      .L139
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rcx, QWORD PTR [rbp-16]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    std::allocator_traits<std::allocator<homeworkAssignment> >::deallocate(std::allocator<homeworkAssignment>&, homeworkAssignment*, unsigned long)
+.L139:
+        nop
+        leave
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator():
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+void std::_Destroy<homeworkAssignment*, homeworkAssignment>(homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    void std::_Destroy<homeworkAssignment*>(homeworkAssignment*, homeworkAssignment*)
+        nop
+        leave
+        ret
+homeworkAssignment&& std::forward<homeworkAssignment>(std::remove_reference<homeworkAssignment>::type&):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+void std::allocator_traits<std::allocator<homeworkAssignment> >::construct<homeworkAssignment, homeworkAssignment>(std::allocator<homeworkAssignment>&, homeworkAssignment*, homeworkAssignment&&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    homeworkAssignment&& std::forward<homeworkAssignment>(std::remove_reference<homeworkAssignment>::type&)
+        mov     rdx, rax
+        mov     rcx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    void __gnu_cxx::new_allocator<homeworkAssignment>::construct<homeworkAssignment, homeworkAssignment>(homeworkAssignment*, homeworkAssignment&&)
+        nop
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::end():
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-24], rdi
+        mov     rax, QWORD PTR [rbp-24]
+        lea     rdx, [rax+8]
+        lea     rax, [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::__normal_iterator(homeworkAssignment* const&)
+        mov     rax, QWORD PTR [rbp-8]
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_use_relocate():
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_nothrow_relocate(std::integral_constant<bool, true>)
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_nothrow_relocate(std::integral_constant<bool, true>):
+        push    rbp
+        mov     rbp, rsp
+        mov     eax, 1
+        pop     rbp
+        ret
+.LC14:
+        .string "vector::_M_realloc_insert"
+void std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_realloc_insert<homeworkAssignment>(__gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >, homeworkAssignment&&):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 104
+        mov     QWORD PTR [rbp-88], rdi
+        mov     QWORD PTR [rbp-96], rsi
+        mov     QWORD PTR [rbp-104], rdx
+        mov     rax, QWORD PTR [rbp-88]
+        mov     edx, OFFSET FLAT:.LC14
+        mov     esi, 1
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_check_len(unsigned long, char const*) const
+        mov     QWORD PTR [rbp-32], rax
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rax, QWORD PTR [rax]
+        mov     QWORD PTR [rbp-40], rax
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rax, QWORD PTR [rax+8]
+        mov     QWORD PTR [rbp-48], rax
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::begin()
+        mov     QWORD PTR [rbp-72], rax
+        lea     rdx, [rbp-72]
+        lea     rax, [rbp-96]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::difference_type __gnu_cxx::operator-<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >(__gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > > const&, __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > > const&)
+        mov     QWORD PTR [rbp-56], rax
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdx, QWORD PTR [rbp-32]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_allocate(unsigned long)
+        mov     QWORD PTR [rbp-64], rax
+        mov     rax, QWORD PTR [rbp-64]
+        mov     QWORD PTR [rbp-24], rax
+        mov     rax, QWORD PTR [rbp-104]
+        mov     rdi, rax
+        call    homeworkAssignment&& std::forward<homeworkAssignment>(std::remove_reference<homeworkAssignment>::type&)
+        mov     rsi, rax
+        mov     rdx, QWORD PTR [rbp-56]
+        mov     rax, rdx
+        add     rax, rax
+        add     rax, rdx
+        sal     rax, 4
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-64]
+        lea     rcx, [rdx+rax]
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdx, rsi
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    void std::allocator_traits<std::allocator<homeworkAssignment> >::construct<homeworkAssignment, homeworkAssignment>(std::allocator<homeworkAssignment>&, homeworkAssignment*, homeworkAssignment&&)
+        mov     QWORD PTR [rbp-24], 0
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_use_relocate()
+        test    al, al
+        je      .L153
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator()
+        mov     rbx, rax
+        lea     rax, [rbp-96]
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::base() const
+        mov     rsi, QWORD PTR [rax]
+        mov     rdx, QWORD PTR [rbp-64]
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rcx, rbx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_relocate(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        mov     QWORD PTR [rbp-24], rax
+        add     QWORD PTR [rbp-24], 48
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator()
+        mov     rbx, rax
+        lea     rax, [rbp-96]
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::base() const
+        mov     rax, QWORD PTR [rax]
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rsi, QWORD PTR [rbp-48]
+        mov     rcx, rbx
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_relocate(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        mov     QWORD PTR [rbp-24], rax
+        jmp     .L154
+.L153:
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator()
+        mov     rbx, rax
+        lea     rax, [rbp-96]
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::base() const
+        mov     rsi, QWORD PTR [rax]
+        mov     rdx, QWORD PTR [rbp-64]
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rcx, rbx
+        mov     rdi, rax
+        call    homeworkAssignment* std::__uninitialized_move_if_noexcept_a<homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        mov     QWORD PTR [rbp-24], rax
+        add     QWORD PTR [rbp-24], 48
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator()
+        mov     rbx, rax
+        lea     rax, [rbp-96]
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::base() const
+        mov     rax, QWORD PTR [rax]
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rsi, QWORD PTR [rbp-48]
+        mov     rcx, rbx
+        mov     rdi, rax
+        call    homeworkAssignment* std::__uninitialized_move_if_noexcept_a<homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        mov     QWORD PTR [rbp-24], rax
+.L154:
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_use_relocate()
+        xor     eax, 1
+        test    al, al
+        je      .L155
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator()
+        mov     rdx, rax
+        mov     rcx, QWORD PTR [rbp-48]
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    void std::_Destroy<homeworkAssignment*, homeworkAssignment>(homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+.L155:
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdx, QWORD PTR [rbp-88]
+        mov     rdx, QWORD PTR [rdx+16]
+        sub     rdx, QWORD PTR [rbp-40]
+        mov     rcx, rdx
+        sar     rcx, 4
+        movabs  rdx, -6148914691236517205
+        imul    rdx, rcx
+        mov     rcx, QWORD PTR [rbp-40]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_deallocate(homeworkAssignment*, unsigned long)
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdx, QWORD PTR [rbp-64]
+        mov     QWORD PTR [rax], rdx
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     QWORD PTR [rax+8], rdx
+        mov     rdx, QWORD PTR [rbp-32]
+        mov     rax, rdx
+        add     rax, rax
+        add     rax, rdx
+        sal     rax, 4
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-64]
+        add     rdx, rax
+        mov     rax, QWORD PTR [rbp-88]
+        mov     QWORD PTR [rax+16], rdx
+        jmp     .L162
+        mov     rdi, rax
+        call    __cxa_begin_catch
+        cmp     QWORD PTR [rbp-24], 0
+        jne     .L157
+        mov     rdx, QWORD PTR [rbp-56]
+        mov     rax, rdx
+        add     rax, rax
+        add     rax, rdx
+        sal     rax, 4
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-64]
+        add     rdx, rax
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    void std::allocator_traits<std::allocator<homeworkAssignment> >::destroy<homeworkAssignment>(std::allocator<homeworkAssignment>&, homeworkAssignment*)
+        jmp     .L158
+.L157:
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator()
+        mov     rdx, rax
+        mov     rcx, QWORD PTR [rbp-24]
+        mov     rax, QWORD PTR [rbp-64]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    void std::_Destroy<homeworkAssignment*, homeworkAssignment>(homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+.L158:
+        mov     rax, QWORD PTR [rbp-88]
+        mov     rdx, QWORD PTR [rbp-32]
+        mov     rcx, QWORD PTR [rbp-64]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_deallocate(homeworkAssignment*, unsigned long)
+        call    __cxa_rethrow
+        mov     rbx, rax
+        call    __cxa_end_catch
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+.L162:
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+
+void std::allocator_traits<std::allocator<homeworkAssignment> >::destroy<homeworkAssignment>(std::allocator<homeworkAssignment>&, homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    void __gnu_cxx::new_allocator<homeworkAssignment>::destroy<homeworkAssignment>(homeworkAssignment*)
+        nop
+        leave
+        ret
+__gnu_cxx::new_allocator<homeworkAssignment>::new_allocator() [base object constructor]:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        nop
+        pop     rbp
+        ret
+std::allocator_traits<std::allocator<homeworkAssignment> >::deallocate(std::allocator<homeworkAssignment>&, homeworkAssignment*, unsigned long):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rcx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    __gnu_cxx::new_allocator<homeworkAssignment>::deallocate(homeworkAssignment*, unsigned long)
+        nop
+        leave
+        ret
+void std::_Destroy<homeworkAssignment*>(homeworkAssignment*, homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    void std::_Destroy_aux<false>::__destroy<homeworkAssignment*>(homeworkAssignment*, homeworkAssignment*)
+        nop
+        leave
+        ret
+homeworkAssignment::homeworkAssignment(homeworkAssignment&&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+        mov     rax, QWORD PTR [rbp-16]
+        mov     edx, DWORD PTR [rax+32]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     DWORD PTR [rax+32], edx
+        mov     rax, QWORD PTR [rbp-16]
+        mov     edx, DWORD PTR [rax+36]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     DWORD PTR [rax+36], edx
+        mov     rax, QWORD PTR [rbp-16]
+        mov     edx, DWORD PTR [rax+40]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     DWORD PTR [rax+40], edx
+        mov     rax, QWORD PTR [rbp-16]
+        movzx   edx, BYTE PTR [rax+44]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     BYTE PTR [rax+44], dl
+        mov     rax, QWORD PTR [rbp-16]
+        movzx   edx, BYTE PTR [rax+45]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     BYTE PTR [rax+45], dl
+        nop
+        leave
+        ret
+void __gnu_cxx::new_allocator<homeworkAssignment>::construct<homeworkAssignment, homeworkAssignment>(homeworkAssignment*, homeworkAssignment&&):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 40
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     QWORD PTR [rbp-40], rdx
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    homeworkAssignment&& std::forward<homeworkAssignment>(std::remove_reference<homeworkAssignment>::type&)
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rsi, rax
+        mov     edi, 48
+        call    operator new(unsigned long, void*)
+        mov     rsi, rbx
+        mov     rdi, rax
+        call    homeworkAssignment::homeworkAssignment(homeworkAssignment&&)
+        nop
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_check_len(unsigned long, char const*) const:
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 56
+        mov     QWORD PTR [rbp-40], rdi
+        mov     QWORD PTR [rbp-48], rsi
+        mov     QWORD PTR [rbp-56], rdx
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::max_size() const
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const
+        sub     rbx, rax
+        mov     rdx, rbx
+        mov     rax, QWORD PTR [rbp-48]
+        cmp     rdx, rax
+        setb    al
+        test    al, al
+        je      .L170
+        mov     rax, QWORD PTR [rbp-56]
+        mov     rdi, rax
+        call    std::__throw_length_error(char const*)
+.L170:
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const
+        mov     QWORD PTR [rbp-32], rax
+        lea     rdx, [rbp-48]
+        lea     rax, [rbp-32]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+        mov     rax, QWORD PTR [rax]
+        add     rax, rbx
+        mov     QWORD PTR [rbp-24], rax
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::size() const
+        cmp     QWORD PTR [rbp-24], rax
+        jb      .L171
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::max_size() const
+        cmp     QWORD PTR [rbp-24], rax
+        jbe     .L172
+.L171:
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::max_size() const
+        jmp     .L173
+.L172:
+        mov     rax, QWORD PTR [rbp-24]
+.L173:
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+__gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::difference_type __gnu_cxx::operator-<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >(__gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > > const&, __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > > const&):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 24
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::base() const
+        mov     rbx, QWORD PTR [rax]
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    __gnu_cxx::__normal_iterator<homeworkAssignment*, std::vector<homeworkAssignment, std::allocator<homeworkAssignment> > >::base() const
+        mov     rdx, QWORD PTR [rax]
+        mov     rax, rbx
+        sub     rax, rdx
+        sar     rax, 4
+        mov     rdx, rax
+        movabs  rax, -6148914691236517205
+        imul    rax, rdx
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_allocate(unsigned long):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        cmp     QWORD PTR [rbp-16], 0
+        je      .L178
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::allocator_traits<std::allocator<homeworkAssignment> >::allocate(std::allocator<homeworkAssignment>&, unsigned long)
+        jmp     .L180
+.L178:
+        mov     eax, 0
+.L180:
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_relocate(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     QWORD PTR [rbp-32], rcx
+        mov     rcx, QWORD PTR [rbp-32]
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rsi, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_do_relocate(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&, std::integral_constant<bool, true>)
+        leave
+        ret
+homeworkAssignment* std::__uninitialized_move_if_noexcept_a<homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 40
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     QWORD PTR [rbp-40], rdx
+        mov     QWORD PTR [rbp-48], rcx
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    std::move_iterator<homeworkAssignment*> std::__make_move_if_noexcept_iterator<homeworkAssignment, std::move_iterator<homeworkAssignment*> >(homeworkAssignment*)
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::move_iterator<homeworkAssignment*> std::__make_move_if_noexcept_iterator<homeworkAssignment, std::move_iterator<homeworkAssignment*> >(homeworkAssignment*)
+        mov     rdi, rax
+        mov     rdx, QWORD PTR [rbp-48]
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rcx, rdx
+        mov     rdx, rax
+        mov     rsi, rbx
+        call    homeworkAssignment* std::__uninitialized_copy_a<std::move_iterator<homeworkAssignment*>, homeworkAssignment*, homeworkAssignment>(std::move_iterator<homeworkAssignment*>, std::move_iterator<homeworkAssignment*>, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+void __gnu_cxx::new_allocator<homeworkAssignment>::destroy<homeworkAssignment>(homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-16]
+        mov     rdi, rax
+        call    homeworkAssignment::~homeworkAssignment() [complete object destructor]
+        nop
+        leave
+        ret
+__gnu_cxx::new_allocator<homeworkAssignment>::deallocate(homeworkAssignment*, unsigned long):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rax, rdx
+        add     rax, rax
+        add     rax, rdx
+        sal     rax, 4
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-16]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    operator delete(void*, unsigned long)
+        nop
+        leave
+        ret
+void std::_Destroy_aux<false>::__destroy<homeworkAssignment*>(homeworkAssignment*, homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+.L189:
+        mov     rax, QWORD PTR [rbp-8]
+        cmp     rax, QWORD PTR [rbp-16]
+        je      .L190
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__addressof<homeworkAssignment>(homeworkAssignment&)
+        mov     rdi, rax
+        call    void std::_Destroy<homeworkAssignment>(homeworkAssignment*)
+        add     QWORD PTR [rbp-8], 48
+        jmp     .L189
+.L190:
+        nop
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::max_size() const:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator() const
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_max_size(std::allocator<homeworkAssignment> const&)
+        leave
+        ret
+unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdx, QWORD PTR [rax]
+        mov     rax, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rax]
+        cmp     rdx, rax
+        jnb     .L194
+        mov     rax, QWORD PTR [rbp-16]
+        jmp     .L195
+.L194:
+        mov     rax, QWORD PTR [rbp-8]
+.L195:
+        pop     rbp
+        ret
+std::allocator_traits<std::allocator<homeworkAssignment> >::allocate(std::allocator<homeworkAssignment>&, unsigned long):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rcx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     edx, 0
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    __gnu_cxx::new_allocator<homeworkAssignment>::allocate(unsigned long, void const*)
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_do_relocate(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&, std::integral_constant<bool, true>):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     QWORD PTR [rbp-32], rcx
+        mov     rcx, QWORD PTR [rbp-32]
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rsi, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__relocate_a<homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        leave
+        ret
+std::move_iterator<homeworkAssignment*> std::__make_move_if_noexcept_iterator<homeworkAssignment, std::move_iterator<homeworkAssignment*> >(homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-24], rdi
+        mov     rdx, QWORD PTR [rbp-24]
+        lea     rax, [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    std::move_iterator<homeworkAssignment*>::move_iterator(homeworkAssignment*)
+        mov     rax, QWORD PTR [rbp-8]
+        leave
+        ret
+homeworkAssignment* std::__uninitialized_copy_a<std::move_iterator<homeworkAssignment*>, homeworkAssignment*, homeworkAssignment>(std::move_iterator<homeworkAssignment*>, std::move_iterator<homeworkAssignment*>, homeworkAssignment*, std::allocator<homeworkAssignment>&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     QWORD PTR [rbp-32], rcx
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rcx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    homeworkAssignment* std::uninitialized_copy<std::move_iterator<homeworkAssignment*>, homeworkAssignment*>(std::move_iterator<homeworkAssignment*>, std::move_iterator<homeworkAssignment*>, homeworkAssignment*)
+        leave
+        ret
+homeworkAssignment* std::__addressof<homeworkAssignment>(homeworkAssignment&):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+void std::_Destroy<homeworkAssignment>(homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    homeworkAssignment::~homeworkAssignment() [complete object destructor]
+        nop
+        leave
+        ret
+std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::_S_max_size(std::allocator<homeworkAssignment> const&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-24], rdi
+        movabs  rax, 192153584101141162
+        mov     QWORD PTR [rbp-8], rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::allocator_traits<std::allocator<homeworkAssignment> >::max_size(std::allocator<homeworkAssignment> const&)
+        mov     QWORD PTR [rbp-16], rax
+        lea     rdx, [rbp-16]
+        lea     rax, [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&)
+        mov     rax, QWORD PTR [rax]
+        leave
+        ret
+std::_Vector_base<homeworkAssignment, std::allocator<homeworkAssignment> >::_M_get_Tp_allocator() const:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+__gnu_cxx::new_allocator<homeworkAssignment>::allocate(unsigned long, void const*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    __gnu_cxx::new_allocator<homeworkAssignment>::_M_max_size() const
+        cmp     QWORD PTR [rbp-16], rax
+        seta    al
+        test    al, al
+        je      .L212
+        call    std::__throw_bad_alloc()
+.L212:
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rax, rdx
+        add     rax, rax
+        add     rax, rdx
+        sal     rax, 4
+        mov     rdi, rax
+        call    operator new(unsigned long)
+        leave
+        ret
+homeworkAssignment* std::__relocate_a<homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&):
+        push    rbp
+        mov     rbp, rsp
+        push    r12
+        push    rbx
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     QWORD PTR [rbp-40], rdx
+        mov     QWORD PTR [rbp-48], rcx
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__niter_base<homeworkAssignment*>(homeworkAssignment*)
+        mov     r12, rax
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__niter_base<homeworkAssignment*>(homeworkAssignment*)
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__niter_base<homeworkAssignment*>(homeworkAssignment*)
+        mov     rdi, rax
+        mov     rax, QWORD PTR [rbp-48]
+        mov     rcx, rax
+        mov     rdx, r12
+        mov     rsi, rbx
+        call    homeworkAssignment* std::__relocate_a_1<homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        add     rsp, 32
+        pop     rbx
+        pop     r12
+        pop     rbp
+        ret
+std::move_iterator<homeworkAssignment*>::move_iterator(homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        lea     rax, [rbp-16]
+        mov     rdi, rax
+        call    std::remove_reference<homeworkAssignment*&>::type&& std::move<homeworkAssignment*&>(homeworkAssignment*&)
+        mov     rdx, QWORD PTR [rax]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     QWORD PTR [rax], rdx
+        nop
+        leave
+        ret
+homeworkAssignment* std::uninitialized_copy<std::move_iterator<homeworkAssignment*>, homeworkAssignment*>(std::move_iterator<homeworkAssignment*>, std::move_iterator<homeworkAssignment*>, homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 48
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     QWORD PTR [rbp-40], rdx
+        mov     BYTE PTR [rbp-1], 1
+        mov     rdx, QWORD PTR [rbp-40]
+        mov     rcx, QWORD PTR [rbp-32]
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    homeworkAssignment* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<homeworkAssignment*>, homeworkAssignment*>(std::move_iterator<homeworkAssignment*>, std::move_iterator<homeworkAssignment*>, homeworkAssignment*)
+        leave
+        ret
+std::allocator_traits<std::allocator<homeworkAssignment> >::max_size(std::allocator<homeworkAssignment> const&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    __gnu_cxx::new_allocator<homeworkAssignment>::max_size() const
+        leave
+        ret
+unsigned long const& std::min<unsigned long>(unsigned long const&, unsigned long const&):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rax, QWORD PTR [rbp-16]
+        mov     rdx, QWORD PTR [rax]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rax, QWORD PTR [rax]
+        cmp     rdx, rax
+        jnb     .L222
+        mov     rax, QWORD PTR [rbp-16]
+        jmp     .L223
+.L222:
+        mov     rax, QWORD PTR [rbp-8]
+.L223:
+        pop     rbp
+        ret
+__gnu_cxx::new_allocator<homeworkAssignment>::_M_max_size() const:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        movabs  rax, 192153584101141162
+        pop     rbp
+        ret
+homeworkAssignment* std::__niter_base<homeworkAssignment*>(homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+homeworkAssignment* std::__relocate_a_1<homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 56
+        mov     QWORD PTR [rbp-40], rdi
+        mov     QWORD PTR [rbp-48], rsi
+        mov     QWORD PTR [rbp-56], rdx
+        mov     QWORD PTR [rbp-64], rcx
+        mov     rax, QWORD PTR [rbp-56]
+        mov     QWORD PTR [rbp-24], rax
+.L230:
+        mov     rax, QWORD PTR [rbp-40]
+        cmp     rax, QWORD PTR [rbp-48]
+        je      .L229
+        mov     rax, QWORD PTR [rbp-40]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__addressof<homeworkAssignment>(homeworkAssignment&)
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__addressof<homeworkAssignment>(homeworkAssignment&)
+        mov     rcx, rax
+        mov     rax, QWORD PTR [rbp-64]
+        mov     rdx, rax
+        mov     rsi, rbx
+        mov     rdi, rcx
+        call    void std::__relocate_object_a<homeworkAssignment, homeworkAssignment, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&)
+        add     QWORD PTR [rbp-40], 48
+        add     QWORD PTR [rbp-24], 48
+        jmp     .L230
+.L229:
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+std::remove_reference<homeworkAssignment*&>::type&& std::move<homeworkAssignment*&>(homeworkAssignment*&):
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+homeworkAssignment* std::__uninitialized_copy<false>::__uninit_copy<std::move_iterator<homeworkAssignment*>, homeworkAssignment*>(std::move_iterator<homeworkAssignment*>, std::move_iterator<homeworkAssignment*>, homeworkAssignment*):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 56
+        mov     QWORD PTR [rbp-40], rdi
+        mov     QWORD PTR [rbp-48], rsi
+        mov     QWORD PTR [rbp-56], rdx
+        mov     rax, QWORD PTR [rbp-56]
+        mov     QWORD PTR [rbp-24], rax
+.L236:
+        lea     rdx, [rbp-48]
+        lea     rax, [rbp-40]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    bool std::operator!=<homeworkAssignment*>(std::move_iterator<homeworkAssignment*> const&, std::move_iterator<homeworkAssignment*> const&)
+        test    al, al
+        je      .L235
+        lea     rax, [rbp-40]
+        mov     rdi, rax
+        call    std::move_iterator<homeworkAssignment*>::operator*() const
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__addressof<homeworkAssignment>(homeworkAssignment&)
+        mov     rsi, rbx
+        mov     rdi, rax
+        call    void std::_Construct<homeworkAssignment, homeworkAssignment>(homeworkAssignment*, homeworkAssignment&&)
+        lea     rax, [rbp-40]
+        mov     rdi, rax
+        call    std::move_iterator<homeworkAssignment*>::operator++()
+        add     QWORD PTR [rbp-24], 48
+        jmp     .L236
+.L235:
+        mov     rax, QWORD PTR [rbp-24]
+        jmp     .L242
+        mov     rdi, rax
+        call    __cxa_begin_catch
+        mov     rdx, QWORD PTR [rbp-24]
+        mov     rax, QWORD PTR [rbp-56]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    void std::_Destroy<homeworkAssignment*>(homeworkAssignment*, homeworkAssignment*)
+        call    __cxa_rethrow
+        mov     rbx, rax
+        call    __cxa_end_catch
+        mov     rax, rbx
+        mov     rdi, rax
+        call    _Unwind_Resume
+.L242:
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+
+__gnu_cxx::new_allocator<homeworkAssignment>::max_size() const:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    __gnu_cxx::new_allocator<homeworkAssignment>::_M_max_size() const
+        leave
+        ret
+void std::__relocate_object_a<homeworkAssignment, homeworkAssignment, std::allocator<homeworkAssignment> >(homeworkAssignment*, homeworkAssignment*, std::allocator<homeworkAssignment>&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 32
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     QWORD PTR [rbp-24], rdx
+        mov     rax, QWORD PTR [rbp-16]
+        mov     rdi, rax
+        call    std::remove_reference<homeworkAssignment&>::type&& std::move<homeworkAssignment&>(homeworkAssignment&)
+        mov     rdx, rax
+        mov     rcx, QWORD PTR [rbp-8]
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rsi, rcx
+        mov     rdi, rax
+        call    void std::allocator_traits<std::allocator<homeworkAssignment> >::construct<homeworkAssignment, homeworkAssignment>(std::allocator<homeworkAssignment>&, homeworkAssignment*, homeworkAssignment&&)
+        mov     rax, QWORD PTR [rbp-16]
+        mov     rdi, rax
+        call    homeworkAssignment* std::__addressof<homeworkAssignment>(homeworkAssignment&)
+        mov     rdx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    void std::allocator_traits<std::allocator<homeworkAssignment> >::destroy<homeworkAssignment>(std::allocator<homeworkAssignment>&, homeworkAssignment*)
+        nop
+        leave
+        ret
+bool std::operator!=<homeworkAssignment*>(std::move_iterator<homeworkAssignment*> const&, std::move_iterator<homeworkAssignment*> const&):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     QWORD PTR [rbp-16], rsi
+        mov     rdx, QWORD PTR [rbp-16]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rsi, rdx
+        mov     rdi, rax
+        call    bool std::operator==<homeworkAssignment*>(std::move_iterator<homeworkAssignment*> const&, std::move_iterator<homeworkAssignment*> const&)
+        xor     eax, 1
+        leave
+        ret
+std::move_iterator<homeworkAssignment*>::operator++():
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rax, QWORD PTR [rax]
+        lea     rdx, [rax+48]
+        mov     rax, QWORD PTR [rbp-8]
+        mov     QWORD PTR [rax], rdx
+        mov     rax, QWORD PTR [rbp-8]
+        pop     rbp
+        ret
+std::move_iterator<homeworkAssignment*>::operator*() const:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rax, QWORD PTR [rax]
+        pop     rbp
+        ret
+void std::_Construct<homeworkAssignment, homeworkAssignment>(homeworkAssignment*, homeworkAssignment&&):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 24
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    homeworkAssignment&& std::forward<homeworkAssignment>(std::remove_reference<homeworkAssignment>::type&)
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rsi, rax
+        mov     edi, 48
+        call    operator new(unsigned long, void*)
+        mov     rsi, rbx
+        mov     rdi, rax
+        call    homeworkAssignment::homeworkAssignment(homeworkAssignment&&)
+        nop
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+bool std::operator==<homeworkAssignment*>(std::move_iterator<homeworkAssignment*> const&, std::move_iterator<homeworkAssignment*> const&):
+        push    rbp
+        mov     rbp, rsp
+        push    rbx
+        sub     rsp, 24
+        mov     QWORD PTR [rbp-24], rdi
+        mov     QWORD PTR [rbp-32], rsi
+        mov     rax, QWORD PTR [rbp-24]
+        mov     rdi, rax
+        call    std::move_iterator<homeworkAssignment*>::base() const
+        mov     rbx, rax
+        mov     rax, QWORD PTR [rbp-32]
+        mov     rdi, rax
+        call    std::move_iterator<homeworkAssignment*>::base() const
+        cmp     rbx, rax
+        sete    al
+        mov     rbx, QWORD PTR [rbp-8]
+        leave
+        ret
+std::move_iterator<homeworkAssignment*>::base() const:
+        push    rbp
+        mov     rbp, rsp
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rax, QWORD PTR [rax]
+        pop     rbp
+        ret
+homeworkManagementSystem::~homeworkManagementSystem() [base object destructor]:
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     QWORD PTR [rbp-8], rdi
+        mov     rax, QWORD PTR [rbp-8]
+        mov     rdi, rax
+        call    std::vector<homeworkAssignment, std::allocator<homeworkAssignment> >::~vector() [complete object destructor]
+        nop
+        leave
+        ret
+__static_initialization_and_destruction_0(int, int):
+        push    rbp
+        mov     rbp, rsp
+        sub     rsp, 16
+        mov     DWORD PTR [rbp-4], edi
+        mov     DWORD PTR [rbp-8], esi
+        cmp     DWORD PTR [rbp-4], 1
+        jne     .L260
+        cmp     DWORD PTR [rbp-8], 65535
+        jne     .L260
+        mov     edi, OFFSET FLAT:_ZStL8__ioinit
+        call    std::ios_base::Init::Init() [complete object constructor]
+        mov     edx, OFFSET FLAT:__dso_handle
+        mov     esi, OFFSET FLAT:_ZStL8__ioinit
+        mov     edi, OFFSET FLAT:_ZNSt8ios_base4InitD1Ev
+        call    __cxa_atexit
+        mov     edi, OFFSET FLAT:hwmanage
+        call    homeworkManagementSystem::homeworkManagementSystem() [complete object constructor]
+        mov     edx, OFFSET FLAT:__dso_handle
+        mov     esi, OFFSET FLAT:hwmanage
+        mov     edi, OFFSET FLAT:_ZN24homeworkManagementSystemD1Ev
+        call    __cxa_atexit
+.L260:
+        nop
+        leave
+        ret
+_GLOBAL__sub_I_hwmanage:
+        push    rbp
+        mov     rbp, rsp
+        mov     esi, 65535
+        mov     edi, 1
+        call    __static_initialization_and_destruction_0(int, int)
+        pop     rbp
+        ret
